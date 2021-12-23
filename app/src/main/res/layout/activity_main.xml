@@ -5,37 +5,56 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#f5f5f5">
-
-        <com.youth.banner.Banner
-            android:id="@+id/banner"
-            android:layout_width="match_parent"
-            android:layout_height="180dp"
-            android:layout_marginBottom="10dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"
-            banner:banner_indicator_normal_color="@android:color/white"
-            banner:banner_indicator_selected_color="@color/colorPrimary"
-            banner:banner_radius="5dp" />
-
-        <com.youth.banner.indicator.RoundLinesIndicator
-            android:id="@+id/indicator"
-            android:layout_width="wrap_content"
-            android:layout_height="20dp"
-            android:layout_below="@id/banner"
-            android:layout_centerHorizontal="true"
-            android:visibility="gone" />
-
-        <ListView
-            android:id="@+id/shopList"
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/banner"/>
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#f5f5f5">
 
-    </RelativeLayout>
+                <com.youth.banner.Banner
+                    android:id="@+id/banner"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    banner:banner_indicator_normal_color="@android:color/white"
+                    banner:banner_indicator_selected_color="@color/colorPrimary"
+                    banner:banner_radius="5dp" />
 
+                <com.youth.banner.indicator.RoundLinesIndicator
+                    android:id="@+id/indicator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_below="@id/banner"
+                    android:layout_centerHorizontal="true"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <include layout="@layout/shoplist_item"
+                android:id="@+id/shop1"/>
+
+            <include layout="@layout/shoplist_item"
+                android:id="@+id/shop2"/>
+
+            <include layout="@layout/shoplist_item"
+                android:id="@+id/shop3"/>
+
+            <include layout="@layout/shoplist_item"
+                android:id="@+id/shop4"/>
+
+            <include layout="@layout/shoplist_item"
+                android:id="@+id/shop5"/>
+
+            <include layout="@layout/shoplist_item"
+                android:id="@+id/shop6"/>
+        </LinearLayout>
+    </ScrollView>
 </RelativeLayout>

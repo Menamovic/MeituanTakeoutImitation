@@ -13,4 +13,7 @@
     <color name="textColor">#BDBDBD</color>
     <color name="main_color">#5CB85C</color>
     <color name="transparent">#00000000</color>
+    <color name="grey">#FFAAAAAA</color>
+    <color name="orange">#FFFEE2A9</color>
+    <color name="red_1">#FFFB7D00</color>
 </resources>
