@@ -8,7 +8,8 @@
         android:id="@+id/shop_image_button"
         android:layout_width="130dp"
         android:layout_height="130dp"
-        android:layout_margin="3dp" />
+        android:layout_margin="3dp"
+        android:onClick="onClickToDetail"/>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="130dp"
@@ -25,7 +26,8 @@
             android:textStyle="bold"
             android:gravity="start"
             android:padding="1sp"
-            android:hint="店铺名称" />
+            android:hint="店铺名称"
+            android:onClick="onClickToDetail"/>
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -42,7 +44,8 @@
                 android:padding="0sp"
                 android:paddingStart="1sp"
                 android:paddingEnd="1sp"
-                android:hint="月售数量"/>
+                android:hint="月售数量"
+                android:onClick="onClickToDetail"/>
             <Button
                 android:id="@+id/average_price_button"
                 android:layout_width="wrap_content"
@@ -54,7 +57,8 @@
                 android:padding="0sp"
                 android:paddingStart="1sp"
                 android:paddingEnd="1sp"
-                android:hint="人均价格"/>
+                android:hint="人均价格"
+                android:onClick="onClickToDetail"/>
         </LinearLayout>
 
         <LinearLayout
@@ -72,7 +76,8 @@
                 android:padding="0sp"
                 android:paddingStart="1sp"
                 android:paddingEnd="1sp"
-                android:hint="起送价格"/>
+                android:hint="起送价格"
+                android:onClick="onClickToDetail"/>
             <Button
                 android:id="@+id/sending_price_button"
                 android:layout_width="wrap_content"
@@ -84,7 +89,8 @@
                 android:padding="0sp"
                 android:paddingStart="1sp"
                 android:paddingEnd="1sp"
-                android:hint="配送费用"/>
+                android:hint="配送费用"
+                android:onClick="onClickToDetail"/>
         </LinearLayout>
 
         <TextView

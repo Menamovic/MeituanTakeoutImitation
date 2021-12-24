@@ -1,5 +1,6 @@
 package com.example.meituantakeoutimitation;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
@@ -170,5 +171,10 @@ public class MainActivity extends AppCompatActivity {
         shop6_sendingPrice.setText(Double.toString(sendingPrices[5]));
         TextView shop6_characteristic = (TextView) shop6.findViewById(R.id.tv_characteristic);
         shop6_characteristic.setText(characteristic[5]);
+    }
+
+    public void onClickToDetail(View view) {
+        Intent intent = new Intent(MainActivity.this, ShopDetailActivity.class);
+        startActivity(intent);
     }
 }

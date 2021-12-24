@@ -1,8 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="horizontal">
+    android:layout_height="50dp">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:background="@color/purple_200"
+        android:textColor="@color/black"
+        android:textSize="23sp"
+        android:hint="标题"/>
 
     <ImageButton
         android:id="@+id/ib_title_back"
@@ -11,11 +20,4 @@
         android:background="@color/purple_200"
         android:src="@mipmap/back"/>
 
-    <TextView
-        android:id="@+id/tv_title"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:gravity="center"
-        android:background="@color/purple_200"/>
-
-</LinearLayout>
+</RelativeLayout>
