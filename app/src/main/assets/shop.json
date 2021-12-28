@@ -1,56 +1,68 @@
 {
   "shop01" : {
-    "imageUrl" : "http://10.4.93.166:8080/MeituanTakeoutImitation/pic-resources/photo0.jpg",
-    "name" : "猪哥哥鸡锁骨",
-    "monthSellNum" : "1438",
-    "averagePrice" : "12",
-    "startSendingPrice" : "10",
-    "inSendingPrice" : "0",
-    "characteristic" : "炸物小吃实惠好店"
+    "imageUrl01" : "http://10.4.93.166:8080/MeituanTakeoutImitation/pic-resources/photo0.jpg",
+    "name01" : "猪哥哥鸡锁骨",
+    "monthSellNum01" : "1438",
+    "averagePrice01" : "￥12",
+    "startSendingPrice01" : "￥10",
+    "inSendingPrice01" : "0",
+    "sendingTime01" : "40分钟",
+    "distance01" : "433m",
+    "characteristic01" : "炸物小吃实惠好店"
   },
   "shop02" : {
-    "imageUrl" : "http://10.4.93.166:8080/MeituanTakeoutImitation/pic-resources/photo1.jpg",
-    "name" : "猪哥哥鸡锁骨",
-    "monthSellNum" : "234",
-    "averagePrice" : "13.43",
-    "startSendingPrice" : "10.01",
-    "inSendingPrice" : "3",
-    "characteristic" : "炸物小吃实惠好店"
+    "imageUrl02" : "http://10.4.93.166:8080/MeituanTakeoutImitation/pic-resources/photo1.jpg",
+    "name02" : "东塘面馆",
+    "monthSellNum02" : "4164",
+    "averagePrice02" : "￥13",
+    "startSendingPrice02" : "￥10",
+    "inSendingPrice02" : "0",
+    "sendingTime02" : "60分钟",
+    "distance02" : "483m",
+    "characteristic02" : "20减3 含2元津贴"
   },
   "shop03" : {
-    "imageUrl" : "http://10.4.93.166:8080/MeituanTakeoutImitation/pic-resources/photo2.jpg",
-    "name" : "猪哥哥鸡锁骨",
-    "monthSellNum" : "234",
-    "averagePrice" : "13.43",
-    "startSendingPrice" : "10.01",
-    "inSendingPrice" : "3",
-    "characteristic" : "炸物小吃实惠好店"
+    "imageUrl03" : "http://10.4.93.166:8080/MeituanTakeoutImitation/pic-resources/photo2.jpg",
+    "name03" : "姜太公无骨烤鱼",
+    "monthSellNum03" : "2597",
+    "averagePrice03" : "￥18",
+    "startSendingPrice03" : "￥10",
+    "inSendingPrice03" : "0",
+    "sendingTime03" : "46分钟",
+    "distance03" : "433m",
+    "characteristic03" : "36减19 60减21 含5元津贴"
   },
   "shop04" : {
-    "imageUrl" : "http://10.4.93.166:8080/MeituanTakeoutImitation/pic-resources/photo3.jpg",
-    "name" : "猪哥哥鸡锁骨",
-    "monthSellNum" : "234",
-    "averagePrice" : "13.43",
-    "startSendingPrice" : "10.01",
-    "inSendingPrice" : "3",
-    "characteristic" : "炸物小吃实惠好店"
+    "imageUrl04" : "http://10.4.93.166:8080/MeituanTakeoutImitation/pic-resources/photo3.jpg",
+    "name04" : "东北饺子馆",
+    "monthSellNum04" : "7770",
+    "averagePrice04" : "￥13",
+    "startSendingPrice04" : "￥10",
+    "inSendingPrice04" : "0",
+    "sendingTime04" : "53分钟",
+    "distance04" : "713m",
+    "characteristic04" : "20减1 50减2 100减5 3.33折起"
   },
   "shop05" : {
-    "imageUrl" : "http://10.4.93.166:8080/MeituanTakeoutImitation/pic-resources/photo4.jpg",
-    "name" : "猪哥哥鸡锁骨",
-    "monthSellNum" : "234",
-    "averagePrice" : "13.43",
-    "startSendingPrice" : "10.01",
-    "inSendingPrice" : "3",
-    "characteristic" : "炸物小吃实惠好店"
+    "imageUrl05" : "http://10.4.93.166:8080/MeituanTakeoutImitation/pic-resources/photo4.jpg",
+    "name05" : "和牛汉堡",
+    "monthSellNum05" : "6202",
+    "averagePrice05" : "￥16",
+    "startSendingPrice05" : "￥12",
+    "inSendingPrice05" : "0",
+    "sendingTime05" : "59分钟",
+    "distance05" : "523m",
+    "characteristic05" : "已领1元券 18减3 30减5 50减10"
   },
   "shop06" : {
-    "imageUrl" : "http://10.4.93.166:8080/MeituanTakeoutImitation/pic-resources/photo5.jpg",
-    "name" : "猪哥哥鸡锁骨",
-    "monthSellNum" : "234",
-    "averagePrice" : "13.43",
-    "startSendingPrice" : "10.01",
-    "inSendingPrice" : "3",
-    "characteristic" : "炸物小吃实惠好店"
+    "imageUrl06" : "http://10.4.93.166:8080/MeituanTakeoutImitation/pic-resources/photo5.jpg",
+    "name06" : "千家客炸串卷饼盖饭",
+    "monthSellNum06" : "3001",
+    "averagePrice06" : "￥13",
+    "startSendingPrice06" : "￥9.9",
+    "inSendingPrice06" : "0",
+    "sendingTime06" : "49分钟",
+    "distance06" : "422m",
+    "characteristic06" : "20减3 30减4 50减6 天天神券"
   }
 }

@@ -6,104 +6,161 @@
 
     <ImageView
         android:id="@+id/shop_image_button"
-        android:layout_width="130dp"
-        android:layout_height="130dp"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
         android:layout_margin="3dp"
-        android:onClick="onClickToDetail"/>
+        android:onClick="onClickToDetail" />
+
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="130dp"
+        android:layout_height="110dp"
+        android:layout_margin="3dp"
         android:orientation="vertical">
 
         <Button
             android:id="@+id/shop_name_button"
             android:layout_width="match_parent"
-            android:layout_height="34dp"
+            android:layout_height="27dp"
             android:layout_marginTop="3dp"
             android:background="@color/transparent"
-            android:textSize="15sp"
-            android:textColor="@color/black"
-            android:textStyle="bold"
             android:gravity="start"
-            android:padding="1sp"
             android:hint="店铺名称"
-            android:onClick="onClickToDetail"/>
+            android:onClick="onClickToDetail"
+            android:padding="0sp"
+            android:paddingEnd="1sp"
+            android:paddingStart="1sp"
+            android:textColor="@color/black"
+            android:textSize="13sp"
+            android:textStyle="bold" />
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="25dp"
             android:orientation="horizontal">
+
             <Button
                 android:id="@+id/sell_num_button"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:background="@color/transparent"
-                android:textSize="11sp"
-                android:textColor="@color/grey"
                 android:gravity="start"
-                android:padding="0sp"
-                android:paddingStart="1sp"
-                android:paddingEnd="1sp"
                 android:hint="月售数量"
-                android:onClick="onClickToDetail"/>
+                android:onClick="onClickToDetail"
+                android:padding="0sp"
+                android:paddingEnd="1sp"
+                android:paddingStart="1sp"
+                android:textColor="@color/grey"
+                android:textSize="11sp" />
+
             <Button
                 android:id="@+id/average_price_button"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:background="@color/transparent"
-                android:textSize="11sp"
-                android:textColor="@color/grey"
                 android:gravity="start"
-                android:padding="0sp"
-                android:paddingStart="1sp"
-                android:paddingEnd="1sp"
                 android:hint="人均价格"
-                android:onClick="onClickToDetail"/>
+                android:onClick="onClickToDetail"
+                android:padding="0sp"
+                android:paddingEnd="1sp"
+                android:paddingStart="1sp"
+                android:textColor="@color/grey"
+                android:textSize="11sp" />
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="25dp"
             android:orientation="horizontal">
-            <Button
-                android:id="@+id/start_sending_price_button"
+
+            <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:background="@color/transparent"
-                android:textSize="11sp"
-                android:textColor="@color/grey"
+                android:layout_height="25dp"
                 android:gravity="start"
-                android:padding="0sp"
-                android:paddingStart="1sp"
-                android:paddingEnd="1sp"
-                android:hint="起送价格"
-                android:onClick="onClickToDetail"/>
-            <Button
-                android:id="@+id/sending_price_button"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/start_sending_price_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@color/transparent"
+                    android:gravity="start"
+                    android:hint="起送价格"
+                    android:onClick="onClickToDetail"
+                    android:padding="0sp"
+                    android:paddingEnd="1sp"
+                    android:paddingStart="1sp"
+                    android:textColor="@color/grey"
+                    android:textSize="10sp" />
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:background="@color/transparent"
-                android:textSize="11sp"
-                android:textColor="@color/grey"
+                android:layout_height="25dp"
                 android:gravity="start"
-                android:padding="0sp"
-                android:paddingStart="1sp"
-                android:paddingEnd="1sp"
-                android:hint="配送费用"
-                android:onClick="onClickToDetail"/>
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/sending_price_button"
+                    android:layout_width="60dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/transparent"
+                    android:gravity="start"
+                    android:hint="配送费用"
+                    android:onClick="onClickToDetail"
+                    android:padding="0sp"
+                    android:paddingEnd="1sp"
+                    android:paddingStart="1sp"
+                    android:textColor="@color/grey"
+                    android:textSize="10sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:gravity="end"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/sending_time_button"
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/transparent"
+                    android:gravity="end"
+                    android:hint="配送时间"
+                    android:onClick="onClickToDetail"
+                    android:padding="0sp"
+                    android:paddingEnd="1sp"
+                    android:paddingStart="1sp"
+                    android:textColor="@color/grey"
+                    android:textSize="10sp" />
+
+                <Button
+                    android:id="@+id/distance_button"
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/transparent"
+                    android:gravity="end"
+                    android:hint="配送距离"
+                    android:onClick="onClickToDetail"
+                    android:padding="0sp"
+                    android:paddingEnd="1sp"
+                    android:paddingStart="1sp"
+                    android:textColor="@color/grey"
+                    android:textSize="10sp" />
+            </LinearLayout>
         </LinearLayout>
 
         <TextView
             android:id="@+id/tv_characteristic"
             android:layout_width="wrap_content"
-            android:layout_height="35dp"
+            android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:background="@color/orange"
-            android:textSize="13sp"
-            android:textColor="@color/red_1"
             android:gravity="center_vertical"
+            android:hint="店铺特色"
             android:padding="1sp"
-            android:hint="店铺特色"/>
+            android:textColor="@color/red_1"
+            android:textSize="12sp" />
 
     </LinearLayout>
 
