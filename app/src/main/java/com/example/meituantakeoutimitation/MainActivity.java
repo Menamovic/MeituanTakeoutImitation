@@ -1,8 +1,11 @@
 package com.example.meituantakeoutimitation;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.res.AssetManager;
 import android.os.Bundle;
 import android.os.Handler;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
@@ -25,33 +28,30 @@ import com.youth.banner.indicator.CircleIndicator;
 import com.youth.banner.util.LogUtils;
 import com.youth.banner.config.IndicatorConfig;
 
+import org.json.JSONObject;
+import org.xutils.common.util.LogUtil;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import butterknife.ButterKnife;
 
 public class MainActivity extends AppCompatActivity {
 
-    //@BindView(R.id.banner)
+    // 广告轮播类对象
     Banner banner;
-    //@BindView(R.id.indicator)
+
+    // 广告轮播圆点
     RoundLinesIndicator indicator;
-    // 店铺图标
-    private int[] icons={R.drawable.jd, R.drawable.qq, R.drawable.qq_dizhu
-            , R.drawable.sina, R.drawable.tmall, R.drawable.uc};
-    // 店铺名称
-    private String[] names={"京东商城", "QQ", "QQ斗地主", "新浪微博", "天猫", "UC浏览器"};
-    // 月售数量
-    private int[] sellNums={1, 2, 3, 4, 5, 6};
-    // 人均价格
-    private double[] averagePrices={1.0, 2.0, 3.0, 4.0, 5.0, 6.0};
-    // 起送价格
-    private double[] startSendingPrices={1.0, 2.0, 3.0, 4.0, 5.0, 6.0};
-    // 配送费用
-    private double[] sendingPrices={1.0, 2.0, 3.0, 4.0, 5.0, 6.0};
-    // 店铺特色
-    private String[] characteristic={"characteristic1", "characteristic2"
-                    , "characteristic3", "characteristic4", "characteristic5"
-                    , "characteristic6"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,10 +59,11 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
 
+        // 获取控件信息
         banner = (Banner) findViewById(R.id.banner);
         indicator = (RoundLinesIndicator) findViewById(R.id.indicator);
 
-        //自定义图片适配器
+        // 自定义图片适配器
         ImageAdapter adapter = new ImageAdapter(DataBean.getTestData());
 
         // 配置轮播广告
@@ -78,106 +79,87 @@ public class MainActivity extends AppCompatActivity {
         banner.setIndicatorGravity(IndicatorConfig.Direction.CENTER);
 
         // 加载店铺信息
-        View shop1 = (View) findViewById(R.id.shop1);
-        ImageView shop1_ib = (ImageView) shop1.findViewById(R.id.shop_image_button);
-        Glide.with(this).load("http://10.4.93.166:8080/pic-resources/photo0.png").into(shop1_ib);
-        //shop1_ib.setBackgroundResource(icons[0]);
-        Button shop1_name = (Button) shop1.findViewById(R.id.shop_name_button);
-        shop1_name.setText(names[0]);
-        Button shop1_sellNum = (Button) shop1.findViewById(R.id.sell_num_button);
-        shop1_sellNum.setText(Integer.toString(sellNums[0]));
-        Button shop1_averagePrice = (Button) shop1.findViewById(R.id.average_price_button);
-        shop1_averagePrice.setText(Double.toString(averagePrices[0]));
-        Button shop1_startSendingPrice = (Button) shop1.findViewById(R.id.start_sending_price_button);
-        shop1_startSendingPrice.setText(Double.toString(startSendingPrices[0]));
-        Button shop1_sendingPrice = (Button) shop1.findViewById(R.id.sending_price_button);
-        shop1_sendingPrice.setText(Double.toString(sendingPrices[0]));
-        TextView shop1_characteristic = (TextView) shop1.findViewById(R.id.tv_characteristic);
-        shop1_characteristic.setText(characteristic[0]);
-
-//        View shop2 = (View) findViewById(R.id.shop2);
-//        ImageButton shop2_ib = (ImageButton) shop2.findViewById(R.id.shop_image_button);
-//        shop2_ib.setBackgroundResource(icons[1]);
-//        Button shop2_name = (Button) shop2.findViewById(R.id.shop_name_button);
-//        shop2_name.setText(names[1]);
-//        Button shop2_sellNum = (Button) shop2.findViewById(R.id.sell_num_button);
-//        shop2_sellNum.setText(Integer.toString(sellNums[1]));
-//        Button shop2_averagePrice = (Button) shop2.findViewById(R.id.average_price_button);
-//        shop2_averagePrice.setText(Double.toString(averagePrices[1]));
-//        Button shop2_startSendingPrice = (Button) shop2.findViewById(R.id.start_sending_price_button);
-//        shop2_startSendingPrice.setText(Double.toString(startSendingPrices[1]));
-//        Button shop2_sendingPrice = (Button) shop2.findViewById(R.id.sending_price_button);
-//        shop2_sendingPrice.setText(Double.toString(sendingPrices[1]));
-//        TextView shop2_characteristic = (TextView) shop2.findViewById(R.id.tv_characteristic);
-//        shop2_characteristic.setText(characteristic[1]);
-//
-//        View shop3 = (View) findViewById(R.id.shop3);
-//        ImageButton shop3_ib = (ImageButton) shop3.findViewById(R.id.shop_image_button);
-//        shop3_ib.setBackgroundResource(icons[2]);
-//        Button shop3_name = (Button) shop3.findViewById(R.id.shop_name_button);
-//        shop3_name.setText(names[2]);
-//        Button shop3_sellNum = (Button) shop3.findViewById(R.id.sell_num_button);
-//        shop3_sellNum.setText(Integer.toString(sellNums[2]));
-//        Button shop3_averagePrice = (Button) shop3.findViewById(R.id.average_price_button);
-//        shop3_averagePrice.setText(Double.toString(averagePrices[2]));
-//        Button shop3_startSendingPrice = (Button) shop3.findViewById(R.id.start_sending_price_button);
-//        shop3_startSendingPrice.setText(Double.toString(startSendingPrices[2]));
-//        Button shop3_sendingPrice = (Button) shop3.findViewById(R.id.sending_price_button);
-//        shop3_sendingPrice.setText(Double.toString(sendingPrices[2]));
-//        TextView shop3_characteristic = (TextView) shop3.findViewById(R.id.tv_characteristic);
-//        shop3_characteristic.setText(characteristic[2]);
-//
-//        View shop4 = (View) findViewById(R.id.shop4);
-//        ImageButton shop4_ib = (ImageButton) shop4.findViewById(R.id.shop_image_button);
-//        shop4_ib.setBackgroundResource(icons[3]);
-//        Button shop4_name = (Button) shop4.findViewById(R.id.shop_name_button);
-//        shop4_name.setText(names[3]);
-//        Button shop4_sellNum = (Button) shop4.findViewById(R.id.sell_num_button);
-//        shop4_sellNum.setText(Integer.toString(sellNums[3]));
-//        Button shop4_averagePrice = (Button) shop4.findViewById(R.id.average_price_button);
-//        shop4_averagePrice.setText(Double.toString(averagePrices[3]));
-//        Button shop4_startSendingPrice = (Button) shop4.findViewById(R.id.start_sending_price_button);
-//        shop4_startSendingPrice.setText(Double.toString(startSendingPrices[3]));
-//        Button shop4_sendingPrice = (Button) shop4.findViewById(R.id.sending_price_button);
-//        shop4_sendingPrice.setText(Double.toString(sendingPrices[3]));
-//        TextView shop4_characteristic = (TextView) shop4.findViewById(R.id.tv_characteristic);
-//        shop4_characteristic.setText(characteristic[3]);
-//
-//        View shop5 = (View) findViewById(R.id.shop5);
-//        ImageButton shop5_ib = (ImageButton) shop5.findViewById(R.id.shop_image_button);
-//        shop5_ib.setBackgroundResource(icons[4]);
-//        Button shop5_name = (Button) shop5.findViewById(R.id.shop_name_button);
-//        shop5_name.setText(names[4]);
-//        Button shop5_sellNum = (Button) shop5.findViewById(R.id.sell_num_button);
-//        shop5_sellNum.setText(Integer.toString(sellNums[4]));
-//        Button shop5_averagePrice = (Button) shop5.findViewById(R.id.average_price_button);
-//        shop5_averagePrice.setText(Double.toString(averagePrices[4]));
-//        Button shop5_startSendingPrice = (Button) shop5.findViewById(R.id.start_sending_price_button);
-//        shop5_startSendingPrice.setText(Double.toString(startSendingPrices[4]));
-//        Button shop5_sendingPrice = (Button) shop5.findViewById(R.id.sending_price_button);
-//        shop5_sendingPrice.setText(Double.toString(sendingPrices[4]));
-//        TextView shop5_characteristic = (TextView) shop5.findViewById(R.id.tv_characteristic);
-//        shop5_characteristic.setText(characteristic[4]);
-//
-//        View shop6 = (View) findViewById(R.id.shop6);
-//        ImageButton shop6_ib = (ImageButton) shop6.findViewById(R.id.shop_image_button);
-//        shop6_ib.setBackgroundResource(icons[5]);
-//        Button shop6_name = (Button) shop6.findViewById(R.id.shop_name_button);
-//        shop6_name.setText(names[5]);
-//        Button shop6_sellNum = (Button) shop6.findViewById(R.id.sell_num_button);
-//        shop6_sellNum.setText(Integer.toString(sellNums[5]));
-//        Button shop6_averagePrice = (Button) shop6.findViewById(R.id.average_price_button);
-//        shop6_averagePrice.setText(Double.toString(averagePrices[5]));
-//        Button shop6_startSendingPrice = (Button) shop6.findViewById(R.id.start_sending_price_button);
-//        shop6_startSendingPrice.setText(Double.toString(startSendingPrices[5]));
-//        Button shop6_sendingPrice = (Button) shop6.findViewById(R.id.sending_price_button);
-//        shop6_sendingPrice.setText(Double.toString(sendingPrices[5]));
-//        TextView shop6_characteristic = (TextView) shop6.findViewById(R.id.tv_characteristic);
-//        shop6_characteristic.setText(characteristic[5]);
+        setShopsInfo();
     }
 
+    // 跳转到店铺详情界面
     public void onClickToDetail(View view) {
         Intent intent = new Intent(MainActivity.this, ShopDetailActivity.class);
         startActivity(intent);
+    }
+
+    public String getJson(String fileName) {
+
+        //将json数据变成字符串
+        StringBuilder stringBuilder = new StringBuilder();
+        try {
+
+            //获取assets资源管理器
+            AssetManager assetManager = this.getApplicationContext().getAssets();
+
+            //通过管理器打开文件并读取
+            BufferedReader bf = new BufferedReader(new InputStreamReader(
+                    assetManager.open(fileName)));
+            String line;
+            while ((line = bf.readLine()) != null) {
+                stringBuilder.append(line);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return stringBuilder.toString();
+    }
+
+    // 加载店铺信息
+    public void setShopsInfo() {
+        try {
+
+            // 解析JSON文件
+            JSONObject jsonObject = new JSONObject(getJson("shop.json"));
+            JSONObject shop01 = jsonObject.getJSONObject("shop01");
+            String imageUrl = shop01.getString("imageUrl");
+            String shopName = shop01.getString("name");
+            String monthSellNum = shop01.getString("monthSellNum");
+            String averagePrice = shop01.getString("averagePrice");
+            String startSendingPrice = shop01.getString("startSendingPrice");
+            String inSendingPrice = shop01.getString("inSendingPrice");
+            String characteristic = shop01.getString("characteristic");
+
+            // 加载店铺图片
+            View shop1 = (View) findViewById(R.id.shop1);
+            ImageView shop1_ib = (ImageView) shop1.findViewById(R.id.shop_image_button);
+            Glide.with(this).load(imageUrl).into(shop1_ib);
+
+            // 店铺名称
+            Button shop1_name = (Button) shop1.findViewById(R.id.shop_name_button);
+            shop1_name.setText(shopName);
+
+            // 月售数量
+            Button shop1_sellNum = (Button) shop1.findViewById(R.id.sell_num_button);
+            shop1_sellNum.setText("月售数量" + monthSellNum);
+
+            // 人均价格
+            Button shop1_averagePrice = (Button) shop1.findViewById(R.id.average_price_button);
+            shop1_averagePrice.setText("人均价格" + averagePrice);
+
+            // 起送价格
+            Button shop1_startSendingPrice = (Button) shop1.findViewById(R.id.start_sending_price_button);
+            shop1_startSendingPrice.setText("起送价格" + startSendingPrice);
+
+            // 配送费用
+            Button shop1_sendingPrice = (Button) shop1.findViewById(R.id.sending_price_button);
+            if (inSendingPrice.equals("0")) {
+                shop1_sendingPrice.setText("免配送费");
+            }
+            else {
+                shop1_sendingPrice.setText("配送费用" + inSendingPrice);
+            }
+
+            // 店铺特色
+            TextView shop1_characteristic = (TextView) shop1.findViewById(R.id.tv_characteristic);
+            shop1_characteristic.setText("店铺特色: " + characteristic);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }

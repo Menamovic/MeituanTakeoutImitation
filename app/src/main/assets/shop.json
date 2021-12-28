@@ -1,0 +1,56 @@
+{
+  "shop01" : {
+    "imageUrl" : "http://10.4.93.166:8080/MeituanTakeoutImitation/pic-resources/photo0.jpg",
+    "name" : "猪哥哥鸡锁骨",
+    "monthSellNum" : "1438",
+    "averagePrice" : "12",
+    "startSendingPrice" : "10",
+    "inSendingPrice" : "0",
+    "characteristic" : "炸物小吃实惠好店"
+  },
+  "shop02" : {
+    "imageUrl" : "http://10.4.93.166:8080/MeituanTakeoutImitation/pic-resources/photo1.jpg",
+    "name" : "猪哥哥鸡锁骨",
+    "monthSellNum" : "234",
+    "averagePrice" : "13.43",
+    "startSendingPrice" : "10.01",
+    "inSendingPrice" : "3",
+    "characteristic" : "炸物小吃实惠好店"
+  },
+  "shop03" : {
+    "imageUrl" : "http://10.4.93.166:8080/MeituanTakeoutImitation/pic-resources/photo2.jpg",
+    "name" : "猪哥哥鸡锁骨",
+    "monthSellNum" : "234",
+    "averagePrice" : "13.43",
+    "startSendingPrice" : "10.01",
+    "inSendingPrice" : "3",
+    "characteristic" : "炸物小吃实惠好店"
+  },
+  "shop04" : {
+    "imageUrl" : "http://10.4.93.166:8080/MeituanTakeoutImitation/pic-resources/photo3.jpg",
+    "name" : "猪哥哥鸡锁骨",
+    "monthSellNum" : "234",
+    "averagePrice" : "13.43",
+    "startSendingPrice" : "10.01",
+    "inSendingPrice" : "3",
+    "characteristic" : "炸物小吃实惠好店"
+  },
+  "shop05" : {
+    "imageUrl" : "http://10.4.93.166:8080/MeituanTakeoutImitation/pic-resources/photo4.jpg",
+    "name" : "猪哥哥鸡锁骨",
+    "monthSellNum" : "234",
+    "averagePrice" : "13.43",
+    "startSendingPrice" : "10.01",
+    "inSendingPrice" : "3",
+    "characteristic" : "炸物小吃实惠好店"
+  },
+  "shop06" : {
+    "imageUrl" : "http://10.4.93.166:8080/MeituanTakeoutImitation/pic-resources/photo5.jpg",
+    "name" : "猪哥哥鸡锁骨",
+    "monthSellNum" : "234",
+    "averagePrice" : "13.43",
+    "startSendingPrice" : "10.01",
+    "inSendingPrice" : "3",
+    "characteristic" : "炸物小吃实惠好店"
+  }
+}
