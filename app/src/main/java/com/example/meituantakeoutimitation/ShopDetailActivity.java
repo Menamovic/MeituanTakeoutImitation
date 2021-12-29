@@ -66,20 +66,20 @@ public class ShopDetailActivity extends AppCompatActivity {
         @Override
         public View getView(int position, View convertView, ViewGroup parent) {
             View view=View.inflate(ShopDetailActivity.this, R.layout.shopdetail_item, null);
-            // 获得组件
-            ImageButton imageButton = (ImageButton) view.findViewById(R.id.detail_image_button);
-            Button nameButton = (Button) view.findViewById(R.id.detail_name_button);
-            TextView rankTextView = (TextView) view.findViewById(R.id.tv_detail_rank);
-            TextView sellNumTextView = (TextView) view.findViewById(R.id.detail_sell_num);
-            TextView praiseDegreeTextView = (TextView) view.findViewById(R.id.detail_praise_degree);
-            TextView detailPriceTextView = (TextView) view.findViewById(R.id.detail_price);
-            // 组装数据
-            imageButton.setBackgroundResource(icons[position]);
-            nameButton.setText(names[position]);
-            rankTextView.setText(Integer.toString(sellRanks[position]));
-            sellNumTextView.setText(Integer.toString(sellNums[position]));
-            praiseDegreeTextView.setText(Double.toString(praiseDegrees[position]));
-            detailPriceTextView.setText(Double.toString(prices[position]));
+//            // 获得组件
+//            ImageButton imageButton = (ImageButton) view.findViewById(R.id.detail_image_button);
+//            Button nameButton = (Button) view.findViewById(R.id.detail_name_button);
+//            TextView rankTextView = (TextView) view.findViewById(R.id.tv_detail_rank);
+//            TextView sellNumTextView = (TextView) view.findViewById(R.id.detail_sell_num);
+//            TextView praiseDegreeTextView = (TextView) view.findViewById(R.id.detail_praise_degree);
+//            TextView detailPriceTextView = (TextView) view.findViewById(R.id.detail_price);
+//            // 组装数据
+//            imageButton.setBackgroundResource(icons[position]);
+//            nameButton.setText(names[position]);
+//            rankTextView.setText(Integer.toString(sellRanks[position]));
+//            sellNumTextView.setText(Integer.toString(sellNums[position]));
+//            praiseDegreeTextView.setText(Double.toString(praiseDegrees[position]));
+//            detailPriceTextView.setText(Double.toString(prices[position]));
             // 返回视图
             return view;
         }

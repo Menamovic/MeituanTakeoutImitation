@@ -6,11 +6,18 @@
         <entry key="..\:/Android/AndroidStudioProjects/MeituanTakeoutImitation/app/src/main/res/layout/activity_main.xml" value="0.21195652173913043" />
         <entry key="..\:/Android/AndroidStudioProjects/MeituanTakeoutImitation/app/src/main/res/layout/module_order.xml" value="0.1265625" />
         <entry key="..\:/Android/AndroidStudioProjects/MeituanTakeoutImitation/app/src/main/res/layout/title_bar.xml" value="0.264" />
+        <entry key="..\:/MeituanTakeoutImitation/app/src/main/res/drawable/circle_red.xml" value="0.17916666666666667" />
         <entry key="..\:/MeituanTakeoutImitation/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/MeituanTakeoutImitation/app/src/main/res/layout/activity_shopping_car.xml" value="0.25364583333333335" />
         <entry key="..\:/MeituanTakeoutImitation/app/src/main/res/layout/banner_title.xml" value="0.12916666666666668" />
-        <entry key="..\:/MeituanTakeoutImitation/app/src/main/res/layout/module_order.xml" value="0.12291666666666666" />
+        <entry key="..\:/MeituanTakeoutImitation/app/src/main/res/layout/item_goods.xml" value="0.25364583333333335" />
+        <entry key="..\:/MeituanTakeoutImitation/app/src/main/res/layout/item_selected_goods.xml" value="0.536" />
+        <entry key="..\:/MeituanTakeoutImitation/app/src/main/res/layout/layout_bottom_sheet.xml" value="0.25364583333333335" />
+        <entry key="..\:/MeituanTakeoutImitation/app/src/main/res/layout/layout_main_shopping_car.xml" value="0.25364583333333335" />
+        <entry key="..\:/MeituanTakeoutImitation/app/src/main/res/layout/module_order.xml" value="0.16" />
+        <entry key="..\:/MeituanTakeoutImitation/app/src/main/res/layout/order_items.xml" value="0.14375" />
         <entry key="..\:/MeituanTakeoutImitation/app/src/main/res/layout/shopdetail.xml" value="0.2" />
-        <entry key="..\:/MeituanTakeoutImitation/app/src/main/res/layout/shopdetail_item.xml" value="0.2" />
+        <entry key="..\:/MeituanTakeoutImitation/app/src/main/res/layout/shopdetail_item.xml" value="0.4" />
         <entry key="..\:/MeituanTakeoutImitation/app/src/main/res/layout/shoplist_item.xml" value="0.7259842519685039" />
         <entry key="..\:/MeituanTakeoutImitation/app/src/main/res/layout/title_bar.xml" value="0.264" />
       </map>

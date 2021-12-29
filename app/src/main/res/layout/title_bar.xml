@@ -7,11 +7,11 @@
         android:id="@+id/tv_title"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:gravity="center"
         android:background="@color/purple_200"
+        android:gravity="center"
+        android:hint="标题"
         android:textColor="@color/black"
-        android:textSize="23sp"
-        android:hint="标题"/>
+        android:textSize="23sp" />
 
     <ImageButton
         android:id="@+id/ib_title_back"

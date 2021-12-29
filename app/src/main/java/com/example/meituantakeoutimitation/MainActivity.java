@@ -109,7 +109,7 @@ public class MainActivity extends AppCompatActivity {
 
     // 跳转到店铺详情界面
     public void onClickToDetail(View view) {
-        Intent intent = new Intent(MainActivity.this, ShopDetailActivity.class);
+        Intent intent = new Intent(MainActivity.this, ShoppingCartActivity.class);
         startActivity(intent);
     }
 

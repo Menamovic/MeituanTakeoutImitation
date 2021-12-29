@@ -1,0 +1,29 @@
+{
+  "detailImageUrl" : "http://10.4.93.166:8080/MeituanTakeoutImitation/pic-resources/background0.jpg",
+  "detailImageUrl2" : "http://10.4.93.166:8080/MeituanTakeoutImitation/pic-resources/photo0.jpg",
+  "food1" : {
+    "imageUrl01" : "",
+    "id01" : 1,
+    "name01" : "香酥鸡柳",
+    "price01": 6.0,
+    "rank01" : 1,
+    "monthSellNum01" : 160,
+    "praiseDegree01" : 0.96
+  },
+  "food2" : {
+    "imageUrl02" : "",
+    "name02" : "",
+    "rank02" : "",
+    "monthSellNum02" : "",
+    "praiseDegree02" : "",
+    "price02": ""
+  },
+  "food3" : {
+    "imageUrl03" : "",
+    "name0" : "",
+    "rank01" : "",
+    "monthSellNum01" : "",
+    "praiseDegree01" : "",
+    "price01": ""
+  }
+}
