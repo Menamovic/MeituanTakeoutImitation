@@ -7,11 +7,13 @@ import android.util.SparseArray;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.ListView;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class OrderActivity extends AppCompatActivity {
@@ -58,6 +60,18 @@ public class OrderActivity extends AppCompatActivity {
         // 填充ListView
         mListView = (ListView) findViewById(R.id.order_list_view);
         mListView.setAdapter(new MyBaseAdapter());
+
+        // 填充费用
+        initFee();
+
+        // 支付按钮事件
+        Button btnPay = (Button) findViewById(R.id.btn_pay);
+        btnPay.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showDialog2(view);
+            }
+        });
     }
 
     private void initTitle() {
@@ -73,6 +87,28 @@ public class OrderActivity extends AppCompatActivity {
                 finish();
             }
         });
+    }
+
+    private double initSubTotalFee() {
+        TextView subTotalFee = (TextView) findViewById(R.id.tv_subtotal_fee);
+        double subFee = 0;
+        for (int i = 0; i < shoppingCar.size(); i++) {
+            GoodsItem item = shoppingCar.valueAt(i);
+            subFee += item.price * item.count;
+        }
+        subTotalFee.setText("小计费用：￥" + Double.toString(subFee));
+        return subFee;
+    }
+
+    private double initSendingFee() {
+        TextView sendingFee = (TextView) findViewById(R.id.tv_sending_fee);
+        sendingFee.setText("配送费用：￥0");
+        return 0.0;
+    }
+
+    private void initFee() {
+        TextView totalFee = (TextView) findViewById(R.id.tv_total_fee);
+        totalFee.setText("总计：￥" + Double.toString(initSubTotalFee() + initSendingFee()));
     }
 
     class MyBaseAdapter extends BaseAdapter {
@@ -107,5 +143,16 @@ public class OrderActivity extends AppCompatActivity {
             //组装玩开始返回
             return view;
         }
+    }
+
+    public void showDialog2(View view) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("请扫码支付");
+
+        final View v =  getLayoutInflater().inflate(R.layout.dialogue_qrcode,null);
+        builder.setView(v);
+
+        builder.show();
+
     }
 }

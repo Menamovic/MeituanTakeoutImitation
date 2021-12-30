@@ -1,6 +1,6 @@
 {
   "shop01" : {
-    "imageUrl01" : "http://10.4.93.166:8080/MeituanTakeoutImitation/pic-resources/photo0.jpg",
+    "imageUrl01" : "http://10.3.56.83:8080/MeituanTakeoutImitation/pic-resources/photo0.jpg",
     "name01" : "猪哥哥鸡锁骨",
     "monthSellNum01" : "1438",
     "averagePrice01" : "￥12",
@@ -11,7 +11,7 @@
     "characteristic01" : "炸物小吃实惠好店"
   },
   "shop02" : {
-    "imageUrl02" : "http://10.4.93.166:8080/MeituanTakeoutImitation/pic-resources/photo1.jpg",
+    "imageUrl02" : "http://10.3.56.83:8080/MeituanTakeoutImitation/pic-resources/photo1.jpg",
     "name02" : "东塘面馆",
     "monthSellNum02" : "4164",
     "averagePrice02" : "￥13",
@@ -22,7 +22,7 @@
     "characteristic02" : "20减3 含2元津贴"
   },
   "shop03" : {
-    "imageUrl03" : "http://10.4.93.166:8080/MeituanTakeoutImitation/pic-resources/photo2.jpg",
+    "imageUrl03" : "http://10.3.56.83:8080/MeituanTakeoutImitation/pic-resources/photo2.jpg",
     "name03" : "姜太公无骨烤鱼",
     "monthSellNum03" : "2597",
     "averagePrice03" : "￥18",
@@ -33,7 +33,7 @@
     "characteristic03" : "36减19 60减21 含5元津贴"
   },
   "shop04" : {
-    "imageUrl04" : "http://10.4.93.166:8080/MeituanTakeoutImitation/pic-resources/photo3.jpg",
+    "imageUrl04" : "http://10.3.56.83:8080/MeituanTakeoutImitation/pic-resources/photo3.jpg",
     "name04" : "东北饺子馆",
     "monthSellNum04" : "7770",
     "averagePrice04" : "￥13",
@@ -44,7 +44,7 @@
     "characteristic04" : "20减1 50减2 100减5 3.33折起"
   },
   "shop05" : {
-    "imageUrl05" : "http://10.4.93.166:8080/MeituanTakeoutImitation/pic-resources/photo4.jpg",
+    "imageUrl05" : "http://10.3.56.83:8080/MeituanTakeoutImitation/pic-resources/photo4.jpg",
     "name05" : "和牛汉堡",
     "monthSellNum05" : "6202",
     "averagePrice05" : "￥16",
@@ -55,7 +55,7 @@
     "characteristic05" : "已领1元券 18减3 30减5 50减10"
   },
   "shop06" : {
-    "imageUrl06" : "http://10.4.93.166:8080/MeituanTakeoutImitation/pic-resources/photo5.jpg",
+    "imageUrl06" : "http://10.3.56.83:8080/MeituanTakeoutImitation/pic-resources/photo5.jpg",
     "name06" : "千家客炸串卷饼盖饭",
     "monthSellNum06" : "3001",
     "averagePrice06" : "￥13",

@@ -12,4 +12,8 @@ public class SelectGoods {
     public void addShoppingCar(GoodsItem item) {
         shoppingCar.append(item.id, item);
     }
+
+    public void clearShoppingCar() {
+        shoppingCar.clear();
+    }
 }

@@ -1,5 +1,6 @@
 package com.example.meituantakeoutimitation;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.res.AssetManager;
 import android.os.Bundle;
@@ -28,6 +29,7 @@ import java.io.InputStreamReader;
 import java.text.NumberFormat;
 import java.util.ArrayList;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -98,9 +100,9 @@ public class ShoppingCartActivity extends AppCompatActivity implements View.OnCl
             String imageUrl2 = jsonObject.getString("detailImageUrl2");
 
             // 获取背景控件信息，并填充数据
-            //ImageView detailAdImage = (ImageView) findViewById(R.id.detail_ad_image);
-            //Log.d("imageUrl", imageUrl);
-            //Glide.with(this).load(imageUrl).into(detailAdImage);
+            ImageView detailAdImage = (ImageView) findViewById(R.id.detail_ad_image);
+            Log.d("imageUrl", imageUrl);
+            Glide.with(this).load(imageUrl).into(detailAdImage);
             ImageView detailShopImage = (ImageView) findViewById(R.id.iv_detail_shop_image);
             Glide.with(this).load(imageUrl2).into(detailShopImage);
 
@@ -131,6 +133,7 @@ public class ShoppingCartActivity extends AppCompatActivity implements View.OnCl
 
                 // 存储当前选择菜品
                 SelectGoods selectGoods = new SelectGoods();
+                selectGoods.clearShoppingCar();
                 for (int i = 0; i < selectedList.size(); i++) {
                     GoodsItem item = selectedList.valueAt(i);
                     Log.d("itemId", Integer.toString(item.id));
@@ -150,7 +153,7 @@ public class ShoppingCartActivity extends AppCompatActivity implements View.OnCl
                 showBottomSheet();
                 break;
             case R.id.clear:
-                clearCart();
+                showdialog(v);
                 break;
             case R.id.tvSubmit:
                 Toast.makeText(ShoppingCartActivity.this, "结算", Toast.LENGTH_SHORT).show();
@@ -266,6 +269,7 @@ public class ShoppingCartActivity extends AppCompatActivity implements View.OnCl
         }
     }
 
+    // 解析JSON文件
     public String getJson(String fileName) {
 
         //将json数据变成字符串
@@ -287,5 +291,41 @@ public class ShoppingCartActivity extends AppCompatActivity implements View.OnCl
             e.printStackTrace();
         }
         return stringBuilder.toString();
+    }
+
+    // 是否清空购物车
+    public void showdialog(View view) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("清空购物车");
+
+        final View v =  getLayoutInflater().inflate(R.layout.dialogue_clear_shoppingcar,null);
+        builder.setView(v);
+
+        builder.setPositiveButton("是", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                clearCart();
+            }
+        });
+        builder.setNegativeButton("否", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+//                Toast.makeText(ShoppingCartActivity.this, "no",Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        builder.show();
+    }
+
+    // 显示菜品详情
+    public void showdialog3(View view) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("菜品详情");
+
+        final View v =  getLayoutInflater().inflate(R.layout.dialogue_detail,null);
+        builder.setView(v);
+
+        builder.show();
+
     }
 }
